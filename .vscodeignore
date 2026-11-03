@@ -1,0 +1,9 @@
+.vscode/**
+.vscode-test/**
+src/**
+tests/**
+MANUAL_TESTING.md
+smartCopy.ahk
+tsconfig.json
+**/*.map
+.gitignore

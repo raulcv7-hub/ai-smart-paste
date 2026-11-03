@@ -1,0 +1,70 @@
+{
+  "name": "ai-smart-paste",
+  "displayName": "AI Smart Paste: Prompt to Code",
+  "description": "Instant file creation, touch, and atomic code injection from AI chats (Gemini, ChatGPT, Claude) with native diff and undo.",
+  "version": "2.0.0",
+  "publisher": "raulcv7",
+  "icon": "images/icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulcv7-hub/ai-smart-paste"
+  },
+  "bugs": {
+    "url": "https://github.com/raulcv7-hub/ai-smart-paste/issues"
+  },
+  "homepage": "https://github.com/raulcv7-hub/ai-smart-paste#readme",
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "paste",
+    "gemini",
+    "chatgpt",
+    "claude",
+    "productivity",
+    "clipboard",
+    "developer tools"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "main": "./out/src/extension.js",
+  "activationEvents": [
+    "onCommand:ai-smart-paste.paste"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-smart-paste.paste",
+        "title": "AI Smart Paste: Create or Update File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ai-smart-paste.paste",
+        "key": "f4",
+        "mac": "f4"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "test": "npm run compile && mocha out/tests/**/*.test.js",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.80.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/vsce": "^2.19.0"
+  }
+}

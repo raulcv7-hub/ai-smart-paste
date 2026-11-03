@@ -1,0 +1,16 @@
+# Build output
+out/
+dist/
+*.vsix
+
+# Dependencies
+node_modules/
+
+# Test environment
+.vscode-test/
+
+# System and logs
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
